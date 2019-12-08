@@ -1,6 +1,6 @@
 {
   "name": "neural-sentence-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple neural sentence search.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,12 @@
     "similarity",
     "one shot learning",
     "knn",
-    "embeddings"
+    "embeddings",
+    "chatbot",
+    "intent",
+    "classification",
+    "ai",
+    "machine learning"
   ],
   "author": "John Loverich",
   "license": "MIT",

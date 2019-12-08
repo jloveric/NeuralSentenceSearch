@@ -4,6 +4,8 @@ that should be returned if a searched for sentence falls into that class. This i
 object.  The approach uses tensorflow sentence embedding and k nearest neighbors to compute the nearest class (there is no neural network training).  It does not run using an external database
 so it can be run in the browser - however, you may need to set up some tensorflow specific initialization depending on where you decide to run it.  The code is very simple.
 
+The module can be used for simple search with small data sets, intent classification or the first step in a larger machine learning pipeline.  My target application is chatbots that are easy to create with small data (and one shot learning) and can run entirely in the browser.  If you are interested in big data, you could instead investigate gnes (Generic Neural Elastic Search) https://gnes.ai/.
+
 ## Using
 
 ``` javascript
