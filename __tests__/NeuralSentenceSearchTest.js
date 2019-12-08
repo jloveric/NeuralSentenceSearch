@@ -1,5 +1,7 @@
 "use strict";
 let NeuralSentenceSearch = require("../NeuralSentenceSearch.js")
+let tf = require('@tensorflow/tfjs')
+tf.setBackend('cpu')
 
 test('Add some examples', async () => {
   let nn = new NeuralSentenceSearch()

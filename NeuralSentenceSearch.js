@@ -1,7 +1,5 @@
 "use strict";
 let use = require('@tensorflow-models/universal-sentence-encoder')
-let tf = require('@tensorflow/tfjs')
-let mobilenetModule = require('@tensorflow-models/mobilenet')
 let knnClassifier = require('@tensorflow-models/knn-classifier/dist/knn-classifier.js')
 let debug = require('debug')('NeuralSentenceSearch')
 
