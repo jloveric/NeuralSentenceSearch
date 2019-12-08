@@ -1,10 +1,10 @@
 {
-  "name": "neuralsentencesearch",
+  "name": "neural-sentence-search",
   "version": "1.0.0",
-  "description": "simple neural sentence search",
+  "description": "Simple neural sentence search.",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-modules ./node_modules/.bin/jest"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
     "tensorflow",
     "sentence",
     "search",
-    "similarity"
+    "similarity",
+    "one shot learning",
+    "knn",
+    "embeddings"
   ],
   "author": "John Loverich",
   "license": "MIT",
