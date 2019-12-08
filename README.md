@@ -7,21 +7,25 @@ so it can be run in the browser - however, you may need to set up some tensorflo
 ## Using
 
 ``` javascript
-let NeuralSentenceSearch = require("NeuralSentenceSearch")
+let b = async ()=>{
+    let NeuralSentenceSearch = require("NeuralSentenceSearch")
 
-let nn = new NeuralSentenceSearch()
+    let nn = new NeuralSentenceSearch()
 
-await nn.initialize();
+    await nn.initialize();
 
-await nn.addSameClass({a : "firstClass"}, "This is a test")
-await nn.addSameClass({a : "secondClass"}, ["My name is John", "Me llamo Sarah"])
-await nn.addSameClass({d : {c : "the last class"}}, ["In the galaxy", "solar system"])
+    await nn.addSameClass({a : "firstClass"}, "This is a test")
+    await nn.addSameClass({a : "secondClass"}, ["My name is John", "Me llamo Sarah"])
+    await nn.addSameClass({d : {c : "the last class"}}, ["In the galaxy", "solar system"])
 
-let ans1 = await nn.search("the sun")
-console.log(ans1)
+    let ans1 = await nn.search("the sun")
+    console.log(ans1)
 
-let ans2 = await nn.search("his name is Jerry")
-console.log(ans2)
+    let ans2 = await nn.search("his name is Jerry")
+    console.log(ans2)
+}
+
+b()
 ```
 with output
 ```javascript
