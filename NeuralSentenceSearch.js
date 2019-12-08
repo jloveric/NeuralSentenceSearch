@@ -22,7 +22,7 @@ class NeuralSentenceSearch {
    * @param {*} obj is a single object which should be returned if any of the "sentences" is matched.
    * @param {*} sentences is a list of sentences that should be mapped to the object.
    */
-  async addSameClass(obj, sentences) {
+  async addClass(obj, sentences) {
     this.dictionary.push(obj)
     
     let theseSentences = (sentences instanceof Array) ? sentences : [sentences]

@@ -15,9 +15,9 @@ let b = async ()=>{
 
     await nn.initialize();
 
-    await nn.addSameClass({a : "firstClass"}, "This is a test")
-    await nn.addSameClass({a : "secondClass"}, ["My name is John", "Me llamo Sarah"])
-    await nn.addSameClass({d : {c : "the last class"}}, ["In the galaxy", "solar system"])
+    await nn.addClass({a : "firstClass"}, "This is a test")
+    await nn.addClass({a : "secondClass"}, ["My name is John", "Me llamo Sarah"])
+    await nn.addClass({d : {c : "the last class"}}, ["In the galaxy", "solar system"])
 
     let ans1 = await nn.search("the sun")
     console.log(ans1)
