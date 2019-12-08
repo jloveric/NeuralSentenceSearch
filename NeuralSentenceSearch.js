@@ -6,7 +6,6 @@ let debug = require('debug')('NeuralSentenceSearch')
 class NeuralSentenceSearch {
   constructor() {
     this.model = null
-    debug('knnClassifier', knnClassifier)
     this.classifier = knnClassifier.create()
     this.dictionary = []
     this.count = 0
@@ -29,7 +28,6 @@ class NeuralSentenceSearch {
     let theseSentences = (sentences instanceof Array) ? sentences : [sentences]
     let embeddings = await this.model.embed(theseSentences)
 
-    console.log("embeddings",embeddings)
     let c = theseSentences.map((s,i)=>{
       this.classifier.addExample(embeddings.slice([i, 0], [1, 512]), this.dictionary.length-1)
     })
@@ -44,4 +42,3 @@ class NeuralSentenceSearch {
 }
 
 module.exports = NeuralSentenceSearch
-//export default NeuralSentenceSearch

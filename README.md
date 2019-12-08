@@ -1,4 +1,4 @@
-# NeuralSentenceSearch
+# Neural Sentence Search
 Sentence search using Tensorflow sentence embeddings that works in the browser - this is a one shot learning method.  The user provides a sentence or a list of sentences (as examples) to the model and an object
 that should be returned if a searched for sentence falls into that class. This is meant to be a little like elasticsearch where the search result is actually an
 object.  The approach uses tensorflow sentence embedding and k nearest neighbors to compute the nearest class (there is no neural network training).  It does not run using an external database
@@ -7,9 +7,10 @@ so it can be run in the browser - however, you may need to set up some tensorflo
 ## Using
 
 ``` javascript
-let b = async ()=>{
-    let NeuralSentenceSearch = require("NeuralSentenceSearch")
+let { NeuralSentenceSearch } = require("neural-sentence-search")
 
+let b = async ()=>{
+    
     let nn = new NeuralSentenceSearch()
 
     await nn.initialize();
