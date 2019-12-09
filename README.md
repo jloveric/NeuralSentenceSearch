@@ -8,6 +8,12 @@ so it can be run in the browser - however, you may need to set up some tensorflo
 
 The module can be used for simple search with small data sets, intent classification or the first step in a larger machine learning pipeline.  My target application is chatbots that are easy to create with small data (and one shot learning) and can run entirely in the browser.  
 
+## Installing
+
+```bash
+npm install neural-sentence-search
+```
+
 ## Using
 
 ``` javascript
