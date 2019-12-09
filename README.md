@@ -49,7 +49,7 @@ with output
         label: '2',
         confidences: { '0': 0, '1': 0, '2': 1 }
       },
-      object: { d: { c: 'the last class' } }
+      key: { d: { c: 'the last class' } }
     }
 ```
 and
@@ -60,7 +60,7 @@ and
         label: '1',
         confidences: { '0': 0, '1': 1, '2': 0 }
       },
-      object: { a: 'secondClass' }
+      key: { a: 'secondClass' }
     }
 
 ```
@@ -72,7 +72,7 @@ and
         label: '0',
         confidences: { '0': 1, '1': 0, '2': 0 }
       },
-      object: 'firstClass'
+      key: 'firstClass'
     }
 
 ```

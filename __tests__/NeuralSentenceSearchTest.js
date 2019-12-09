@@ -15,17 +15,17 @@ test('Add some examples', async () => {
 
   let ans1 = await nn.search("the sun")
   expect(ans1.result.classIndex).toBe(2)
-  expect(ans1.object.d.c).toBe('the last class')
+  expect(ans1.key.d.c).toBe('the last class')
   console.log('ans', ans1)
 
   let ans2 = await nn.search("his name is Jerry")
   expect(ans2.result.classIndex).toBe(1)
-  expect(ans2.object.a).toBe('secondClass')
+  expect(ans2.key.a).toBe('secondClass')
   console.log('ans', ans2)
 
   let ans3 = await nn.search("a test this is")
   expect(ans3.result.classIndex).toBe(0)
-  expect(ans3.object).toBe('firstClass')
+  expect(ans3.key).toBe('firstClass')
   console.log('ans', ans3)
 
 });

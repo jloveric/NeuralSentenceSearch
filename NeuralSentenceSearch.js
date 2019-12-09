@@ -37,7 +37,7 @@ class NeuralSentenceSearch {
   async search(val) {
     let example = await this.model.embed(val)
     let ans = await this.classifier.predictClass(example, this.nearestNeighbors)
-    return { result : ans, object : this.dictionary[ans.classIndex] }
+    return { result : ans, key : this.dictionary[ans.classIndex] }
   }
 }
 
