@@ -32,7 +32,7 @@ let b = async ()=>{
     let ans1 = await nn.search("the sun")
     console.log(ans1)
 
-    let ans2 = await nn.search("his name is Jerry")
+    let ans2 = await nn.search("his name is Hudson")
     console.log(ans2)
 
     let ans3 = await nn.search("a test this is")
