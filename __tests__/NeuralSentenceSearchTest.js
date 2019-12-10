@@ -18,7 +18,7 @@ test('Add some examples', async () => {
   expect(ans1.key.d.c).toBe('the last class')
   console.log('ans', ans1)
 
-  let ans2 = await nn.search("his name is Jerry")
+  let ans2 = await nn.search("his name is Hudson")
   expect(ans2.result.classIndex).toBe(1)
   expect(ans2.key.a).toBe('secondClass')
   console.log('ans', ans2)
