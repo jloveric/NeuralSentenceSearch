@@ -1,6 +1,6 @@
 {
   "name": "neural-sentence-search",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Simple neural sentence search.",
   "main": "index.js",
   "scripts": {

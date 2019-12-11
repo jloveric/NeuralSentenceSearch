@@ -2,8 +2,7 @@
 
 # Neural Sentence Search
 Sentence search using Tensorflow sentence embeddings that works in the browser - this is a one shot learning method.  The user provides a sentence or a list of sentences (as examples) to the model and an object
-that should be returned if a searched for sentence falls into that class. This is meant to be a little like elasticsearch where the search result is actually an
-object.  The approach uses tensorflow sentence embedding and k nearest neighbors to compute the nearest class (there is no neural network training).  It does not run using an external database
+that should be returned if a searched for sentence falls into that class.  The approach uses tensorflow sentence embedding and k nearest neighbors to compute the nearest class (there is no neural network training).  It does not run using an external database
 so it can be run in the browser - however, you may need to set up some tensorflow specific initialization depending on where you decide to run it.  The code is very simple.
 
 The module can be used for simple search with small data sets, intent classification or the first step in a larger machine learning pipeline.  My target application is chatbots that are easy to create with small data (and one shot learning) and can run entirely in the browser.  
@@ -37,46 +36,60 @@ let b = async ()=>{
 
     let ans3 = await nn.search("a test this is")
     console.log(ans3)
+
+    let ans4 = await nn.search("My name is Ripley from a galaxy far away and this is a test", 3)
+  console.log('ans', ans4)
 }
 
 b()
 ```
 with output
 ```javascript
-    {
+    [
+      {
         classIndex: 2,
         label: '2',
-        confidences: { '0': 0, '1': 0, '2': 1 }
-      },
-      key: { d: { c: 'the last class' } },
-      distance: { '2': 0.973992109298706 }
-    }
+        distance: 0.973992109298706,
+        key: { d: [Object] }
+      }
+    ]
+
 
 ```
 and
 ```javascript
-    {
-      result: {
-        classIndex: 1,
-        label: '1',
-        confidences: { '0': 0, '1': 1, '2': 0 }
-      },
-      key: { a: 'secondClass' },
-      distance: { '1': 1.0002893209457397 }
-    }
-
-```
-and
-```javascript
-   {
-      result: {
+    [
+      {
         classIndex: 0,
         label: '0',
-        confidences: { '0': 1, '1': 0, '2': 0 }
+        distance: 0.6502495408058167,
+        key: 'firstClass'
+      }
+    ]
+
+```
+and
+```javascript
+   [
+      {
+        classIndex: 1,
+        label: '1',
+        distance: 0.8455434441566467,
+        key: { a: 'secondClass' }
       },
-      key: 'firstClass',
-      distance: { '0': 0.6502495408058167 }
-  }
+      {
+        classIndex: 2,
+        label: '2',
+        distance: 1.0046688318252563,
+        key: { d: [Object] }
+      },
+      {
+        classIndex: 0,
+        label: '0',
+        distance: 1.0175029039382935,
+        key: 'firstClass'
+      }
+    ]
 ```
 
 ## Other
