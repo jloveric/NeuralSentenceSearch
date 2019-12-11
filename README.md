@@ -44,13 +44,14 @@ b()
 with output
 ```javascript
     {
-      result: {
         classIndex: 2,
         label: '2',
         confidences: { '0': 0, '1': 0, '2': 1 }
       },
-      key: { d: { c: 'the last class' } }
+      key: { d: { c: 'the last class' } },
+      distance: { '2': 0.973992109298706 }
     }
+
 ```
 and
 ```javascript
@@ -60,21 +61,22 @@ and
         label: '1',
         confidences: { '0': 0, '1': 1, '2': 0 }
       },
-      key: { a: 'secondClass' }
+      key: { a: 'secondClass' },
+      distance: { '1': 1.0002893209457397 }
     }
 
 ```
 and
-```
+```javascript
    {
       result: {
         classIndex: 0,
         label: '0',
         confidences: { '0': 1, '1': 0, '2': 0 }
       },
-      key: 'firstClass'
-    }
-
+      key: 'firstClass',
+      distance: { '0': 0.6502495408058167 }
+  }
 ```
 
 ## Other
